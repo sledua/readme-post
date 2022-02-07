@@ -4,7 +4,9 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 ## Table of contents
 
 - [Task for style guide](#Task-for-style-guide)
-
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
 # Task for style guide
 ### Layout
 - Mibile: 375px
@@ -20,3 +22,17 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 ### Font
 - Famaly [Outfit](https://fonts.google.com/specimen/Outfit)
 - Weights: 400, 700
+### Screenshot
+
+![](./screenshot.png)
+### Links
+
+- Solution URL: [Repo](https://github.com/sledua/readme-post/tree/qr-code-work-gh-pages)
+- Live Site URL: [Live GH-pages](https://sledua.github.io/readme-post/)
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox

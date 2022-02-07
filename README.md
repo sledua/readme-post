@@ -10,10 +10,10 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 - Mibile: 375px
 - Desktop: 1440px
 ### Colors
-- White: hsl(0, 0%, 100%)
-- Light gray: hsl(212, 45%, 89%)
-- Grayish blue: hsl(220, 15%, 55%)
-- Dark blue: hsl(218, 44%, 22%)
+- White: hsl(0, 0%, 100%) rgba(255, 255, 255, 1);
+- Light gray: hsl(212, 45%, 89%) rgba(214, 226, 240, 1);
+- Grayish blue: hsl(220, 15%, 55%) rgba(123, 135, 157, 1);
+- Dark blue: hsl(218, 44%, 22%) rgba(31, 50, 81, 1);
 ## Typography
 ### Body Copy
 - Font size (paragraph) : 15px

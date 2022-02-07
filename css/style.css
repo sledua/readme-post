@@ -1,5 +1,73 @@
 /* reset */
-
+*,*::before,*::after {
+	box-sizing: border-box;
+}
+body, p {
+	margin: 0;
+}
 /* base */
-
+@font-face {
+	font-family: 'Outfit-Regular';
+	src: url('../fonts/Outfit/static/Outfit-Regular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'Outfit-SemiBold';
+	src: url('../fonts/Outfit/static/Outfit-SemiBold.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 700;
+}
+:root {
+	/*colors*/
+	--cr-white: rgba(255, 255, 255, 1);
+	--cr-light-gray: rgba(214, 226, 240, 1);
+	--cr-grayish-blue: rgba(123, 135, 157, 1);
+	--cr-dark-blue: rgba(31, 50, 81, 1);
+}
 /* custom */
+body {
+	background-color: var(--cr-light-gray);
+	height: 100vh;
+}
+p {
+	font-weight: 400;
+	font-size: 15px;
+}
+.flex {
+	display: flex;
+}
+.center {
+	justify-content: center;
+	align-items: center;
+}
+.container {
+	background-color: var(--cr-white);
+	border-radius: 5%;
+	padding: 20px;
+	flex-direction: column;
+	justify-content: space-between;
+	max-width: 325px;
+}
+.qr-image {
+	margin-bottom: 20px;
+}
+.qr-image > img {
+	max-width: 100%;
+	border-radius: 3%;
+}
+.qr-text > p {
+	text-align: center;
+}
+.qr-text :first-child {
+	font-family: 'Outfit-SemiBold', serif;
+	color: var(--cr-dark-blue);
+	font-size: 22px;
+	margin-bottom: 13px;
+	
+}
+.qr-text :last-child {
+	font-family: 'Outfit-Regular', serif;
+	color: var(--cr-grayish-blue);
+	margin: 0 10px 20px 10px;
+}

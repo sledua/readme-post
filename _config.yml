@@ -1,0 +1,8 @@
+title: Readme post my tree
+name: Readme post
+email: art.sled.ua@gmail.com
+description: I follow the tasks from the site frontendmentor.io, everything that needs to be done there.
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://sledua.github.io/readme-post/" 
+github_username: sledua
+category_dir: blog

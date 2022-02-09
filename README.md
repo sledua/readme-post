@@ -28,7 +28,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 ### Links
 
 - Solution URL: [Repo](https://github.com/sledua/readme-post/tree/qr-code-work-gh-pages)
-- Live Site URL: [Live GH-pages](https://sledua.github.io/readme-post/)
+- Live Site URL: [Live GH-pages](https://sledua.github.io/readme-post/qr.html)
 ## My process
 
 ### Built with

@@ -1,0 +1,52 @@
+/* reset */
+*,*::before,*::after {
+	box-sizing: border-box;
+}
+body, p {
+	margin: 0;
+}
+/* base */
+@font-face {
+	font-family: 'Open-Sans-Regular';
+	src: url('../fonts/Open_Sans/static/OpenSans-Regular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'Poppins-Regular';
+	src: url('../fonts/Poppsins/Poppins-Regular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'Poppins-Semi-Bold';
+	src: url('../fonts/Poppsins/Poppins-SemiBold.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 600;
+}
+:root {
+	/*colors*/
+	--cr-violet: hsl(257, 40%, 49%);
+	--cr-soft-magenta: hsl(300, 69%, 71%);
+}
+/* custom */
+body {
+	height: 100vh;
+	background-image: url(../../img/bg-desktop.svg);
+	background-color: var(--cr-violet);
+}
+p {
+	font-weight: 400;
+	font-size: 15px;
+}
+.flex {
+	display: flex;
+}
+.container {
+	background-color: var(--cr-white);
+	border-radius: 5%;
+	padding: 20px;
+	flex-direction: column;
+	justify-content: space-between;
+	max-width: 325px;
+}

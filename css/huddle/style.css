@@ -32,9 +32,10 @@ body, p {
 /* custom */
 html {
 	font-size: 10px;
+	
 }
 header, section {
-	padding: 0 7.5rem;
+	padding: 0 8.5rem;
 }
 body {
 	height: 100vh;
@@ -45,22 +46,23 @@ body {
 }
 h1 {
 	font-family: 'Poppins-Semi-Bold', sans-serif;
-	font-size: 5.3rem;
+	font-size: 3.3rem;
 	color: #fff;
-	line-height: 8rem;
+	line-height: 1.6;
 }
 p {
 	font-family: 'Poppins-Regular', sans-serif;
 	font-weight: 400;
-	font-size: 2rem;
+	font-size: 1.6rem;
+	max-width: 50rem;
 	color: #fff;
-	line-height: 1.5;
+	line-height: 1.9;
 	margin-bottom: 3rem;
 }
 .flex {
 	display: flex;
 }
-header {
+body > header {
 	margin: 0;
 	
 }
@@ -72,7 +74,7 @@ header {
 	max-height: 4rem;
 }
 .pic-huddle > img {
-	max-width: 70rem;
+	max-width: 60rem;
 }
 .info-huddle {
 	padding-left: 4.5rem;
@@ -86,7 +88,7 @@ header {
 	vertical-align: middle;
 	text-decoration: none;
 	font-family: 'Open-Sans-Regular', sans-serif;
-	font-size: 2.3rem;
+	font-size: 2rem;
 	padding: 1.5rem 5rem;
 	background-color: #fff;
 	color: var(--cr-violet);
@@ -102,9 +104,35 @@ header {
 	border-color: var(--cr-violet);
 	box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
 }
-}
 footer {
 	position: absolute;
 	bottom: 3rem;
 	right: 7rem;
+}
+.soc-row {
+	color: #fff;
+	font-size: 1.4rem;
+	transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+}
+.soc-row > span:hover {
+	cursor: pointer;
+	color: var(--cr-soft-magenta);
+}
+@media screen and (max-width: 426px) {
+  body {
+		display: flex;
+		flex-direction: column;
+	}
+	header, section, footer {
+		padding: 0 2.5rem;
+	}
+	.container {
+		flex-direction: column;
+	}
+	.pic-huddle > img {
+		max-width: 20rem;
+	}
+	footer {
+		position: relative;
+	}
 }

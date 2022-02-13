@@ -8,19 +8,19 @@ body, p {
 /* base */
 @font-face {
 	font-family: 'Open-Sans-Regular';
-	src: url('../fonts/Open_Sans/static/OpenSans-Regular.ttf') format('truetype');
+	src: url('../../fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf') format('truetype');
 	font-style: normal;
 	font-weight: normal;
 }
 @font-face {
 	font-family: 'Poppins-Regular';
-	src: url('../fonts/Poppsins/Poppins-Regular.ttf') format('truetype');
+	src: url('../../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
 	font-style: normal;
 	font-weight: normal;
 }
 @font-face {
 	font-family: 'Poppins-Semi-Bold';
-	src: url('../fonts/Poppsins/Poppins-SemiBold.ttf') format('truetype');
+	src: url('../../fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
 	font-style: normal;
 	font-weight: 600;
 }
@@ -30,23 +30,81 @@ body, p {
 	--cr-soft-magenta: hsl(300, 69%, 71%);
 }
 /* custom */
+html {
+	font-size: 10px;
+}
+header, section {
+	padding: 0 7.5rem;
+}
 body {
 	height: 100vh;
 	background-image: url(../../img/bg-desktop.svg);
 	background-color: var(--cr-violet);
+	background-repeat: no-repeat;
+	position: relative;
+}
+h1 {
+	font-family: 'Poppins-Semi-Bold', sans-serif;
+	font-size: 5.3rem;
+	color: #fff;
+	line-height: 8rem;
 }
 p {
+	font-family: 'Poppins-Regular', sans-serif;
 	font-weight: 400;
-	font-size: 15px;
+	font-size: 2rem;
+	color: #fff;
+	line-height: 1.5;
+	margin-bottom: 3rem;
 }
 .flex {
 	display: flex;
 }
-.container {
-	background-color: var(--cr-white);
-	border-radius: 5%;
-	padding: 20px;
-	flex-direction: column;
-	justify-content: space-between;
-	max-width: 325px;
+header {
+	margin: 0;
+	
+}
+.logo {
+	padding-top: 6rem;
+	padding-bottom: 9rem;
+}
+.logo > img {
+	max-height: 4rem;
+}
+.pic-huddle > img {
+	max-width: 70rem;
+}
+.info-huddle {
+	padding-left: 4.5rem;
+}
+.btn-p {
+	cursor: pointer;
+}
+.btn-p > a{
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	font-family: 'Open-Sans-Regular', sans-serif;
+	font-size: 2.3rem;
+	padding: 1.5rem 5rem;
+	background-color: #fff;
+	color: var(--cr-violet);
+	border-color: black;
+	border: 0;
+	border-radius: 10em;
+	box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+	transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+}
+.btn-p > a:hover {
+	color: #fff;
+	background-color: var(--cr-soft-magenta);
+	border-color: var(--cr-violet);
+	box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
+}
+}
+footer {
+	position: absolute;
+	bottom: 3rem;
+	right: 7rem;
 }

@@ -32,7 +32,6 @@ body, p {
 /* custom */
 html {
 	font-size: 10px;
-	
 }
 header, section {
 	padding: 0 8.5rem;
@@ -42,6 +41,7 @@ body {
 	background-image: url(../../img/bg-desktop.svg);
 	background-color: var(--cr-violet);
 	background-repeat: no-repeat;
+	background-size: cover;
 	position: relative;
 }
 h1 {
@@ -64,7 +64,6 @@ p {
 }
 body > header {
 	margin: 0;
-	
 }
 .logo {
 	padding-top: 6rem;
@@ -104,13 +103,11 @@ body > header {
 	border-color: var(--cr-violet);
 	box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
 }
-footer {
-	position: absolute;
-	bottom: 3rem;
-	right: 7rem;
-}
 .soc-row {
+	display: flex;
+	justify-content: flex-end;
 	color: #fff;
+	padding: 4rem 23rem 0;
 	font-size: 1.4rem;
 	transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
 }
@@ -119,20 +116,51 @@ footer {
 	color: var(--cr-soft-magenta);
 }
 @media screen and (max-width: 426px) {
-  body {
+	body {
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
+		background-image: url(../../img/bg-mobile.svg);
 	}
 	header, section, footer {
 		padding: 0 2.5rem;
 	}
+	.logo {
+		padding-top: 3rem;
+		padding-bottom: 5rem;
+	}
+	.pic-huddle {
+		width: 100%;
+	}
+	.pic-huddle > img {
+		width: 100%;
+		background-size: cover;
+	}
 	.container {
 		flex-direction: column;
 	}
-	.pic-huddle > img {
-		max-width: 20rem;
+	.info-huddle {
+		padding-left: 0;
 	}
-	footer {
-		position: relative;
+	h1 {
+		margin-bottom: 1rem;
+		margin-top: 3rem;
+		font-size: 3rem;
+		text-align: center;
+	}
+	p {
+		text-align: center;
+		padding: 0 2.5rem;
+	}
+	.btn-p {
+		text-align: center;
+	}
+	.soc-row {
+		display: flex;
+    justify-content: center;
+    padding: 7rem 0;
+	}
+	.btn-p > a{
+		padding: 1.5rem 7rem;
 	}
 }

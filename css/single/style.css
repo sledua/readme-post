@@ -1,0 +1,48 @@
+/* reset */
+*,*::before,*::after {
+	box-sizing: border-box;
+}
+body, p {
+	margin: 0;
+}
+/* base */
+@font-face {
+	font-family: 'Karla-Regular';
+	src: url('../../fonts/Karla/static/Karla-Regular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'Karla-SemiBold';
+	src: url('../../fonts/Karla/static/Karla-SemiBold.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 700;
+}
+:root {
+	/*colors*/
+	--cr-cyan: hsl(179, 62%, 43%);
+	--cr-bright-yelllow: hsl(71, 73%, 54%);
+	--cr-light-gray: hsl(204, 43%, 93%);
+	--cr-grayish-blue: hsl(218, 22%, 67%);
+}
+/* custom */
+body {
+	background-color: var(--cr-light-gray);
+	height: 100vh;
+	width: 1440px;
+	font-family: 'Karla-Regular', sans-serif;
+	font-size: 16px;
+}
+.container {
+	display: flex;
+	justify-content: center;
+	
+}
+.card {
+	border: 1px solid var(--cr-bright-yelllow);
+	height: 475px;
+	width: 630px;
+}
+@media (min-width: 375px), screen and (orientation: portrait) {
+	
+}

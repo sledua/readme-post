@@ -32,7 +32,49 @@ body {
 	font-family: 'Karla-Regular', sans-serif;
 	font-size: 16px;
 }
-.container {
+@media (min-width: 375px), screen and (orientation: portrait) {
+	body {
+		width: 375px;
+	}
+	.container {
+		margin: 0 20px;
+		
+	}
+	.card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		box-shadow: 0px 4px 28px 6px rgba(34, 60, 80, 0.07);
+	}
+	.card-header {
+		display: inherit;
+		flex-direction: column;
+		justify-content: space-between;
+		color: var(--cr-grayish-blue);
+		background-color: #fff;
+		padding: 0 10px;
+		height: 270px;
+	}
+	.card-header > h2 {
+		color: var(--cr-cyan);
+		/* padding-top: 20px;
+		padding-bottom: 7px;
+		letter-spacing: 0.3px;
+		font-size: 23.8px; */
+	}
+	.card-header > p {
+		line-height: 1.5;
+		display: none;
+	}
+	.card-header > span {
+		font-family: 'Karla-SemiBold', sans-serif;
+		color: var(--cr-bright-yelllow);
+		/* font-size: 18px;
+		padding-bottom: 15px;
+		letter-spacing: 0.2px; */
+	}
+}
+/* .container {
 	height: 100vh;
 	display: flex;
 	justify-content: center;
@@ -134,7 +176,4 @@ body {
 }
 .card-info-why > ul > li {
 	padding-bottom: 4.5px;
-}
-@media (min-width: 375px), screen and (orientation: portrait) {
-	
-}
+} */

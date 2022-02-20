@@ -1,0 +1,223 @@
+/* reset */
+*,*::before,*::after {
+	box-sizing: border-box;
+}
+body, p {
+	margin: 0;
+}
+/* base */
+@font-face {
+	font-family: 'Karla-Regular';
+	src: url('../../fonts/Karla/static/Karla-Regular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'Karla-SemiBold';
+	src: url('../../fonts/Karla/static/Karla-SemiBold.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 700;
+}
+:root {
+	/*colors*/
+	--cr-cyan: hsl(179, 62%, 43%);
+	--cr-bright-yelllow: hsl(71, 73%, 54%);
+	--cr-light-gray: hsl(204, 43%, 93%);
+	--cr-grayish-blue: hsl(222, 11%, 75%);
+}
+/* custom */
+body {
+	background-color: var(--cr-light-gray);
+	width: 1440px;
+	font-family: 'Karla-Regular', sans-serif;
+	font-size: 16px;
+}
+.container {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.card {
+	height: 475px;
+	width: 635px;
+	margin-top: 85px;
+	border-radius: 0.5em;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0px 4px 28px 6px rgba(34, 60, 80, 0.07);
+}
+.card-header {
+	height: 220px;
+	color: var(--cr-grayish-blue);
+	background-color: #fff;
+	padding-left: 40px;
+	padding-bottom: 40px;
+}
+.card-header > h2 {
+	color: var(--cr-cyan);
+	padding-top: 20px;
+	padding-bottom: 7px;
+	letter-spacing: 0.3px;
+	font-size: 23.8px;
+}
+.card-header > span {
+	font-family: 'Karla-SemiBold', sans-serif;
+	color: var(--cr-bright-yelllow);
+	font-size: 18px;
+	padding-bottom: 15px;
+	letter-spacing: 0.2px;
+}
+.card-header > p {
+	padding-top: 12px;
+	letter-spacing: -0.2px;
+}
+.card-header > p +p {
+	padding-top: 8px;
+	padding-bottom: 5px;
+}
+.card-info {
+	display: inherit;
+	height: 100%;
+	padding: 0;
+}
+.card-info-price {
+	width: 100%;
+	color: #fff;
+	background-color: var(--cr-cyan);
+}
+.card-info-price > h3{
+	font-family: 'Karla-SemiBold', sans-serif;
+	padding-top: 20px;
+	padding-bottom: 8px;
+	padding-left: 40px;
+}
+.card-info-price > p {
+	margin-top: -10.5px;
+	padding-left: 40px;
+}
+.card-info-price > p > span {
+	font-family: 'Karla-SemiBold', sans-serif;
+	font-size: 35px;
+	padding-right: 9px;
+}
+.card-info-price > :nth-child(3) {
+	padding-top: 18px;
+}
+.btn-s {
+	margin-left: 40px;
+	text-align: center;
+	width: 235px;
+	margin-top: 23.5px;
+	background-color: var(--cr-bright-yelllow);
+	padding: 15px 0;
+	border-radius: 0.4em;
+	cursor: pointer;
+}
+.btn-s > a {
+	color: #fff;
+	text-decoration: none;
+}
+.card-info-why {
+	background-color: hsl(179deg 47% 52%);
+	width: 100%;
+}
+.card-info-why > h3 {
+	padding-top: 20px;
+	padding-left: 40px;
+	color: #fff;
+}
+.card-info-why > ul{
+	list-style-type: none;
+	font-size: 14px;
+	color: #fff;
+}
+.card-info-why > ul > li {
+	padding-bottom: 4.5px;
+}
+@media (max-width: 376px) {
+	body {
+		width: 375px;
+	}
+	.container {
+		margin: 0 20px;
+		
+	}
+	.card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		box-shadow: 0px 4px 28px 6px rgba(34, 60, 80, 0.07);
+		margin: 20px 0;
+	}
+	.card-header {
+		display: inherit;
+		flex-direction: column;
+		justify-content: space-around;
+		color: var(--cr-grayish-blue);
+		background-color: #fff;
+		padding: 0 10px;
+		height: 270px;
+	}
+	.card-header > h2 {
+		color: var(--cr-cyan);
+		margin: 0;
+		padding-top: 10px;
+	}
+	.card-header > p {
+		line-height: 1.5;
+		display: none;
+	}
+	.card-header > span {
+		font-family: 'Karla-SemiBold', sans-serif;
+		color: var(--cr-bright-yelllow);
+	}
+	.card-header > span:nth-child(3) {
+		color: hsl(0deg 0% 66%);;
+		letter-spacing: -0.2px;
+		line-height: 1.7;
+		padding-bottom: 30px;
+	}
+	.card-info {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	.card-info-price {
+		width: 100%;
+		color: #fff;
+		background-color: var(--cr-cyan);
+		padding: 0 10px;
+	}
+	.card-info-price > h3 {
+		padding-left: 0;
+	}
+	.card-info-price > p {
+		padding-left: 0;
+	}
+	.btn-s {
+		width: 100%;
+		margin-bottom: 20px;
+		margin-left: 0;
+	}
+	.card-info-why {
+		background-color: hsl(179deg 47% 52%);
+		width: 100%;
+		padding: 0 10px;
+	}
+	.card-info-why > h3 {
+		padding-top: 10px;
+		padding-left: 0;
+		color: #fff;
+	}
+	.card-info-why > ul{
+		list-style-type: none;
+		font-size: 13px;
+		color: #fff;
+		margin: 0;
+		padding: 0;
+	}
+	.card-info-why > ul > li {
+		padding-bottom: 4.5px;
+	}
+}

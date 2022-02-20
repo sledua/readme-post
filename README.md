@@ -8,6 +8,10 @@
 		- [Screenshot](#screenshot-1)
 		- [Links](#links-1)
 		- [Built with](#built-with-1)
+- [Single price grid component](#single-price-grid-component)
+		- [Screenshot](#screenshot-2)
+		- [Links](#links-2)
+		- [Built with](#built-with-2)
 
 # QR code component solution
 
@@ -39,3 +43,18 @@ This is a solution to the [Huddle landing page with single introductory section 
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
+# Single price grid component
+This is a solution to the [Single price grid component](https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+### Screenshot
+
+![](./sledua.github.io_readme-post_single-price.html.png)
+### Links
+
+- Solution URL: [Repo](https://github.com/sledua/readme-post/tree/single-price)
+- Live Site URL: [Live GH-pages](https://sledua.github.io/readme-post/single-price.html)
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- JS

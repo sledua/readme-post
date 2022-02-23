@@ -2,9 +2,12 @@
 *.css.map
 *.sass.map
 *.scss.map
-_task-jpg
 _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
 vendor
+_task_jpg
+node_modules
+dist
+package-lock.json

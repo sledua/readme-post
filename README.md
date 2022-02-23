@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Table of contents for Rontend Mentor
 
 - [QR code component solution](#qr-code-component-solution)
@@ -58,3 +59,8 @@ This is a solution to the [Single price grid component](https://www.frontendment
 - CSS custom properties
 - Flexbox
 - JS
+=======
+# Gulp blender in work.
+	-re-work app (and ben app folder is dev stuff, or dist is publik) 
+	I`m follow cite for run and start https://semaphoreci.com/community/tutorials/getting-started-with-gulp-js
+>>>>>>> gulp-dev

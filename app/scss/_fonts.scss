@@ -1,0 +1,6 @@
+@import "_mixins/font-face";
+
+@include font-face("poppins", "../fonts/Poppins/Poppins-Bold", bold);
+@include font-face("OpenSans-Bold", "/app/fonts/Open_Sans/static/OpenSans/OpenSans-Bold", bold);
+@include font-face("OpenSans-Medium", "/app/fonts/Open_Sans/static/OpenSans/OpenSans-Medium");
+@include font-face("OpenSans-Light", "/app/fonts/Open_Sans/static/OpenSans/OpenSans-Light");

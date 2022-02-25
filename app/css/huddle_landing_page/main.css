@@ -1,0 +1,105 @@
+@font-face {
+  font-family: "poppins";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/Poppins/Poppins-Bold.eot");
+  src: url("../fonts/Poppins/Poppins-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Poppins/Poppins-Bold.woff") format("woff"), url("../fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "OpenSans-Bold";
+  font-weight: bold;
+  font-style: normal;
+  src: url("/app/fonts/Open_Sans/static/OpenSans/OpenSans-Bold.eot");
+  src: url("/app/fonts/Open_Sans/static/OpenSans/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("/app/fonts/Open_Sans/static/OpenSans/OpenSans-Bold.woff") format("woff"), url("/app/fonts/Open_Sans/static/OpenSans/OpenSans-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "OpenSans-Medium";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/app/fonts/Open_Sans/static/OpenSans/OpenSans-Medium.eot");
+  src: url("/app/fonts/Open_Sans/static/OpenSans/OpenSans-Medium.eot?#iefix") format("embedded-opentype"), url("/app/fonts/Open_Sans/static/OpenSans/OpenSans-Medium.woff") format("woff"), url("/app/fonts/Open_Sans/static/OpenSans/OpenSans-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "OpenSans-Light";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/app/fonts/Open_Sans/static/OpenSans/OpenSans-Light.eot");
+  src: url("/app/fonts/Open_Sans/static/OpenSans/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("/app/fonts/Open_Sans/static/OpenSans/OpenSans-Light.woff") format("woff"), url("/app/fonts/Open_Sans/static/OpenSans/OpenSans-Light.ttf") format("truetype");
+}
+::placeholder {
+  color: #666;
+}
+
+::selection {
+  background-color: orange;
+  color: #fff;
+}
+
+:root {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.4rem;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.65;
+  font-family: "poppins", sans-serif;
+  overflow-x: hidden;
+  color: #333;
+}
+body input, body textarea {
+  border: #666 1px solid;
+  outline: none;
+}
+body input:focus:required:invalid, body textarea:focus:required:invalid {
+  border-color: red;
+}
+body input:required:valid, body textarea:required:valid {
+  border-color: green;
+}
+
+.container {
+  padding: 0 4.7rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo, .btn-lg {
+  margin-top: 8rem;
+}
+
+.logo {
+  margin-left: 3.6rem;
+}
+
+.btn-lg {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  border: 1px solid #ff52bf;
+  border-radius: 2rem;
+  padding: 0 2.5rem;
+  height: 3.4rem;
+  margin-right: 8rem;
+}
+.btn-lg > a {
+  font-family: "OpenSans-Medium", sans-serif;
+  text-decoration: none;
+  color: #ff52bf;
+}
+
+.text_block {
+  text-align: center;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.img-responsive.img-width {
+  width: 100%;
+}
+
+/*==========  Desktop First  ==========*/
+/*==========  Mobile First  ==========*/

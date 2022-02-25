@@ -5,14 +5,15 @@
 ::placeholder {
 	color: #666;
 }
-
 ::selection {
 	background-color: $accent;
 	color: #fff;
 }
-
+:root {
+	font-size: $base_size;
+}
 body {
-	font-size: 16px;
+	font-size: 1.4rem;
 	min-width: 320px;
 	position: relative;
 	line-height: 1.65;
@@ -30,7 +31,34 @@ body {
 		}
 	}
 }
-
+.container {
+	padding: 0 4.7rem;
+	display: flex;
+	justify-content: space-between;
+}
+.logo, .btn-lg {
+	margin-top: 8rem;
+}
+.logo {
+	margin-left: 3.6rem;
+}
+.btn-lg {
+	font-size: 1.8rem;
+	text-transform: capitalize;
+	border: 1px solid $pink;
+	border-radius: 2rem;
+	padding: 0 2.5rem;
+  height: 3.4rem;
+	margin-right: 8rem;
+	> a {
+		font-family: $openSans-Medium;
+		text-decoration: none;
+		color: $pink;
+	}
+}
+.text_block {
+	text-align: center;
+}
 .img-responsive {
 	display: block;
 	max-width: 100%;

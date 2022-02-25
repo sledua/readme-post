@@ -23,22 +23,22 @@ function cleanApp (cb) {
 	src('dist/')
 		.pipe(clean());
 	cb();
+	
 }
-function generateCSS() {
-	src('./app/scss/*/*.scss')
+function generateCSS(cb) {
+	src('./app/scss/*.scss')
 		.pipe(sass().on('error', sass.logError))
-		.pipe(cssNano())
-		.pipe(dest(`${DIST}/css/${NAMEPROD}/`))
-		.pipe(sync.stream());
+		//.pipe(cssNano())
+		.pipe(dest(`${DIST}/css/${NAMEPROD}/`&&`app/css/${NAMEPROD}`))
+		
+	cb();
 }
-function watchApp() {
-	watch('app/*.html', copy);
-	watch('app/fonts/*/*.*', copy);
-	watch('app/img/**/*', copy);
-	watch('app/libs/**/*', copy);
-	watch(`app/scss/${NAMEPROD}/*.scss`, generateCSS);
+function watchApp(cb) {
+	watch(['app/*.html',`app/scss/*.scss`]);
+	//watch(`app/scss/*/*.scss`, generateCSS);
+	cb();
 }
-function browserSync() {
+function browserSync(cb) {
 	sync.init({
 		server: {
 			baseDir: "app/"
@@ -47,12 +47,13 @@ function browserSync() {
 	watch('app/fonts/*/*.*', copy);
 	watch('app/img/**/*', copy);
 	watch('app/libs/**/*', copy);
-	watch(`app/scss/${NAMEPROD}/*.scss`, generateCSS);
+	watch(`app/scss/*.scss`, generateCSS).on('change', sync.reload);
 	watch('app/*.html', copy).on('change', sync.reload);
+	cb();
 }
 
 exports.copy = copy;
 exports.css = generateCSS;
 exports.watch = watchApp;
 exports.sync = browserSync;
-exports.dev = series(cleanApp, browserSync);
+exports.dev = series(browserSync, watchApp);

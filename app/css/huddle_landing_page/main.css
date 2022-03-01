@@ -1,30 +1,26 @@
 @font-face {
-  font-family: "poppins";
-  font-weight: bold;
+  font-family: "Poppins";
   font-style: normal;
-  src: url("../fonts/Poppins/Poppins-Bold.eot");
-  src: url("../fonts/Poppins/Poppins-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Poppins/Poppins-Bold.woff") format("woff"), url("../fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+  font-weight: 800;
+  src: url("../fonts/Poppins/Poppins_Bold.ttf") format("ttf");
 }
 @font-face {
-  font-family: "OpenSans-Bold";
-  font-weight: bold;
+  font-family: "OpenSans_Bold";
   font-style: normal;
-  src: url("/app/fonts/Open_Sans/static/OpenSans/OpenSans-Bold.eot");
-  src: url("/app/fonts/Open_Sans/static/OpenSans/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("/app/fonts/Open_Sans/static/OpenSans/OpenSans-Bold.woff") format("woff"), url("/app/fonts/Open_Sans/static/OpenSans/OpenSans-Bold.ttf") format("truetype");
+  font-weight: 800;
+  src: url("../fonts/Open_Sans/OpenSans_Bold.ttf") format("ttf");
 }
 @font-face {
-  font-family: "OpenSans-Medium";
-  font-weight: normal;
+  font-family: "OpenSans_Medium";
   font-style: normal;
-  src: url("/app/fonts/Open_Sans/static/OpenSans/OpenSans-Medium.eot");
-  src: url("/app/fonts/Open_Sans/static/OpenSans/OpenSans-Medium.eot?#iefix") format("embedded-opentype"), url("/app/fonts/Open_Sans/static/OpenSans/OpenSans-Medium.woff") format("woff"), url("/app/fonts/Open_Sans/static/OpenSans/OpenSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  src: url("../fonts/Open_Sans/OpenSans_Medium.ttf") format("ttf");
 }
 @font-face {
-  font-family: "OpenSans-Light";
-  font-weight: normal;
+  font-family: "OpenSans_Light";
   font-style: normal;
-  src: url("/app/fonts/Open_Sans/static/OpenSans/OpenSans-Light.eot");
-  src: url("/app/fonts/Open_Sans/static/OpenSans/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("/app/fonts/Open_Sans/static/OpenSans/OpenSans-Light.woff") format("woff"), url("/app/fonts/Open_Sans/static/OpenSans/OpenSans-Light.ttf") format("truetype");
+  font-weight: 400;
+  src: url("../fonts/Open_Sans/OpenSans_Light.ttf") format("ttf");
 }
 ::placeholder {
   color: #666;
@@ -44,7 +40,7 @@ body {
   min-width: 320px;
   position: relative;
   line-height: 1.65;
-  font-family: "poppins", sans-serif;
+  font-family: "Poppins";
   overflow-x: hidden;
   color: #333;
 }
@@ -59,10 +55,14 @@ body input:required:valid, body textarea:required:valid {
   border-color: green;
 }
 
-.container {
+header {
   padding: 0 4.7rem;
   display: flex;
   justify-content: space-between;
+}
+
+.container {
+  padding: 0 4.7rem;
 }
 
 .logo, .btn-lg {
@@ -83,21 +83,85 @@ body input:required:valid, body textarea:required:valid {
   margin-right: 8rem;
 }
 .btn-lg > a {
-  font-family: "OpenSans-Medium", sans-serif;
+  font-family: "OpenSans_Medium", sans-serif;
   text-decoration: none;
   color: #ff52bf;
 }
 
 .text_block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
+.text_block > h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 5.4rem;
+  font-weight: 700;
+  margin-top: 21rem;
+  margin-bottom: 0;
+}
+.text_block > p {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.1rem;
+  width: 67rem;
+  word-spacing: 3px;
+  line-height: 1.4;
+}
+.text_block > .btn {
+  margin-top: 2.3rem;
+  margin-right: 1rem;
+  background-color: #ff8fd8;
+  padding: 2rem 10rem;
+  border-radius: 3rem;
+}
+.text_block > .btn > a {
+  font-family: "Poppins";
+  text-decoration: none;
+  color: #fff;
+  font-size: 2.4rem;
+}
 
-.img-responsive {
+.statistic_blok {
+  display: flex;
+}
+
+.statistic_item:first-child {
+  width: 50%;
+  padding-left: 23.7rem;
+  padding-top: 11rem;
+}
+.statistic_item:last-child {
+  width: 50%;
+  padding-left: 2rem;
+  padding-top: 12rem;
+}
+.statistic_item > span {
+  font-family: "OpenSans_Bold", sans-serif;
+  font-weight: 900;
+  font-size: 10rem;
+  line-height: 1.2;
+}
+.statistic_item > p {
+  font-family: "OpenSans_Medium", sans-serif;
+  font-size: 3.5rem;
+  margin: 0;
+}
+
+.img_block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 11rem;
+  margin-right: 6rem;
+}
+
+.img_responsive {
   display: block;
   max-width: 100%;
   height: auto;
 }
-.img-responsive.img-width {
+.img_responsive.img_width {
   width: 100%;
 }
 

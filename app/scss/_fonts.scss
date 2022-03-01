@@ -1,6 +1,12 @@
-@import "_mixins/font-face";
-
-@include font-face("poppins", "../fonts/Poppins/Poppins-Bold", bold);
-@include font-face("OpenSans-Bold", "/app/fonts/Open_Sans/static/OpenSans/OpenSans-Bold", bold);
-@include font-face("OpenSans-Medium", "/app/fonts/Open_Sans/static/OpenSans/OpenSans-Medium");
-@include font-face("OpenSans-Light", "/app/fonts/Open_Sans/static/OpenSans/OpenSans-Light");
+@mixin font($fname, $fstyle, $fweight, $furl) {
+	@font-face {
+		font-family: $fname;
+		font-style: $fstyle;
+		font-weight: $fweight;
+		src: url($furl) format('ttf');
+	}
+}
+@include font("Poppins", normal, 800, "../fonts/Poppins/Poppins_Bold.ttf");
+@include font("OpenSans_Bold", normal, 800, "../fonts/Open_Sans/OpenSans_Bold.ttf");
+@include font("OpenSans_Medium", normal, 500, "../fonts/Open_Sans/OpenSans_Medium.ttf");
+@include font("OpenSans_Light",normal, 400, "../fonts/Open_Sans/OpenSans_Light.ttf");

@@ -145,7 +145,7 @@ header {
 .section-one {
 	background-color: $very_pale_blue;
 	&::after {
-		content: "";
+		content: '';
     position: absolute;
     left: 0;
     right: 0;
@@ -174,6 +174,72 @@ header {
 }
 .section-two {
 	flex-direction: row-reverse;
+	> .fix_img > .fix_img_ch {
+		height: 38rem;
+    margin-top: -7rem;
+    margin-right: 16rem;
+	}
+	> .simular-text > h2 {
+		font-size: 4.2rem;
+		margin-top: 5rem;
+		margin-left: -3rem;
+	}
+	> .simular-text > p {
+		margin-left: -3rem;
+	}
+}
+.section-tree {
+	background-color: $very_pale_blue;
+	&::after {
+		content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    top: -24.5rem;
+    background-image: url(/img/huddle-lp/bg-section-bottom-desktop-1.svg);
+    width: 100%;
+    height: 16.5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+		transform: rotate(180deg) translateY(-50%);
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		background-image: url(/img/huddle-lp/bg-section-bottom-desktop-2.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		z-index: 1;
+    height: 15.6rem;
+    left: 0;
+    right: 0;
+    bottom: -15.6rem;
+	}
+	> .fix_img > .fix_img_ch {
+		height: 40rem;
+    margin-top: -17rem;
+	}
+	> .simular-text > h2 {
+		z-index: 10;
+		margin-top: -2rem;
+		margin-left: -1rem;
+	}
+	> .simular-text > p {
+		margin-left: -1rem;
+	}
+}
+.-bottom-btn {
+	margin-top: 7rem;
+	> .text_block > h2 {
+		font-size: 4.3rem;
+		text-transform: capitalize;
+		margin-top: 23rem;
+	}
+	> .text_block > .btn {
+		margin-top: 2.7rem;
+	}
 }
 .fix_img {
 	margin: auto;

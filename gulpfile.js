@@ -45,7 +45,7 @@ function browserSync(cb) {
 		},
 		notify: false,
 		online: true,
-		tunnel: 'artdev', // Attempt to use the URL https://yousutename.loca.lt
+		//tunnel: 'artdev', // Attempt to use the URL https://yousutename.loca.lt
 	});
 	watch('app/fonts/*/*.*', copy);
 	watch('app/img/**/*', copy);

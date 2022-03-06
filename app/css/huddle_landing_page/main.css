@@ -64,6 +64,7 @@ header {
 
 .container {
   padding: 0 4.7rem;
+  position: relative;
 }
 
 .logo, .btn-lg {
@@ -300,6 +301,16 @@ header {
 }
 .img_responsive.img_width {
   width: 100%;
+}
+
+.footer {
+  background-color: #00252e;
+  position: static;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 5rem;
+  height: 50rem;
 }
 
 /*==========  Desktop First  ==========*/

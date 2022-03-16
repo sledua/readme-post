@@ -338,9 +338,90 @@ header {
   grid-column: c/span;
   grid-row: row;
 }
+.footer > .info-gr > p {
+  font-size: 1.6rem;
+  width: 30rem;
+}
+.footer > .info-gr .tel {
+  position: relative;
+  margin: 0.3rem 4rem;
+}
+.footer > .info-gr .tel::before {
+  content: "";
+  position: absolute;
+  background-image: url(/img/huddle-lp/icon-phone.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 2rem;
+  height: 2rem;
+  bottom: 0px;
+  left: -4rem;
+}
+.footer > .info-gr .tel > span {
+  text-transform: capitalize;
+  font-size: 1.7rem;
+}
+.footer > .info-gr .tel > a {
+  text-decoration: none;
+  font-size: 1.9rem;
+  margin-left: 1rem;
+  color: #f5faff;
+}
+.footer > .info-gr .meil {
+  position: relative;
+  margin: 1rem 4rem;
+}
+.footer > .info-gr .meil::before {
+  content: "";
+  position: absolute;
+  background-image: url(/img/huddle-lp/icon-email.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 2rem;
+  height: 1.6rem;
+  bottom: 6px;
+  left: -3.8rem;
+}
+.footer > .info-gr .meil > a {
+  text-decoration: none;
+  font-size: 1.9rem;
+  color: #f5faff;
+}
 .footer .submit-gr {
   grid-column: c 2/span;
   grid-row: row;
+  font-family: "Poppins", sans-serif;
+}
+.footer .submit-gr > h4 {
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+.footer .submit-gr > p {
+  font-size: 1.45rem;
+  margin-top: 0;
+  width: 33rem;
+}
+.footer .submit-gr form {
+  display: flex;
+  margin-top: 3.8rem;
+}
+.footer .submit-gr form > input {
+  width: 31.7rem;
+  height: 4.4rem;
+  border-radius: 0.5rem;
+  font-size: 5rem;
+  padding: 0;
+}
+.footer .submit-gr form > button {
+  margin-left: 4rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+  padding: 1rem 4rem;
+  text-transform: uppercase;
+  background-color: #ff52bf;
+  color: #f5faff;
 }
 .footer .submit-gr input, .footer .submit-gr button {
   appearance: none;

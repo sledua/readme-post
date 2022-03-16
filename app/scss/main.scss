@@ -301,10 +301,91 @@ header {
 		> .logo-f {
 			
 		}
+	> p {
+		font-size: 1.6rem;
+    width: 30rem;
+	}
+	.tel {
+		position: relative;
+    margin: 0.3rem 4rem;
+		&::before {
+			content: '';
+			position: absolute;
+			background-image: url(/img/huddle-lp/icon-phone.svg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 2rem;
+			height: 2rem;
+			bottom: 0px;
+			left: -4rem;
+		}
+		> span {
+			text-transform: capitalize;
+			font-size: 1.7rem;
+		}
+		> a {
+			text-decoration: none;
+			font-size: 1.9rem;
+			margin-left: 1rem;
+			color: $very_pale_blue;
+		}
+	}
+	.meil {
+		position: relative;
+    margin: 1rem 4rem;
+		&::before {
+			content: '';
+			position: absolute;
+			background-image: url(/img/huddle-lp/icon-email.svg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 2rem;
+			height: 1.6rem;
+			bottom: 6px;
+			left: -3.8rem;
+		}
+		> a {
+			text-decoration: none;
+			font-size: 1.9rem;
+			color: $very_pale_blue;
+		}
+	}
 	}
 	.submit-gr {
 		grid-column: c 2/ span;
 		grid-row: row;
+		font-family: $default-font, sans-serif;
+		> h4 {
+			text-transform: uppercase;
+			font-size: 2.2rem;
+			margin-top: 0;
+			margin-bottom: 1.5rem;
+		}
+		> p {
+			font-size: 1.45rem;
+			margin-top: 0;
+			width: 33rem;
+		}
+		form {
+			display: flex;
+			margin-top: 3.8rem;
+			> input {
+				width: 31.7rem;
+				height: 4.4rem;
+				border-radius: 0.5rem;
+				font-size: 5rem;
+				padding: 0;
+			}
+			> button {
+				margin-left: 4rem;
+				height: 5rem;
+				border-radius: 0.5rem;
+				padding: 1rem 4rem;
+				text-transform: uppercase;
+				background-color: $pink;
+				color: $very_pale_blue;
+			}
+		}
 		input, button {
 			appearance: none;
 		}

@@ -304,13 +304,46 @@ header {
 }
 
 .footer {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: [c] 66rem [c] 52rem;
+  grid-template-rows: [row] auto;
   background-color: #00252e;
   position: static;
   bottom: 0;
   left: 0;
   right: 0;
-  top: 5rem;
-  height: 50rem;
+  height: 77rem;
+  margin-top: 40rem;
+  color: #f5faff;
+  padding: 6rem 12rem;
+}
+.footer::after {
+  content: "";
+  position: absolute;
+  background-image: url(/img/huddle-lp/bg-footer-top-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  z-index: 1;
+  height: 15.6rem;
+  left: 0;
+  right: 0;
+  bottom: 88.4rem;
+}
+.footer .logo-a {
+  fill: #f5faff;
+}
+.footer > .info-gr {
+  grid-column: c/span;
+  grid-row: row;
+}
+.footer .submit-gr {
+  grid-column: c 2/span;
+  grid-row: row;
+}
+.footer .submit-gr input, .footer .submit-gr button {
+  appearance: none;
 }
 
 /*==========  Desktop First  ==========*/

@@ -265,13 +265,50 @@ header {
 	}
 }
 .footer {
+	display: grid;
+	grid-gap: 2rem;
+	grid-template-columns: [c] 66rem [c] 52rem;
+	grid-template-rows: [row] auto;
 	background-color: $very_dark_cyan;
 	position: static;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	top: 5rem;
-	height: 50rem;
+	//top: 15rem;
+	height: 77rem;
+	margin-top: 40rem;
+	color: $very_pale_blue;
+	padding: 6rem 12rem;
+	&::after {
+		content: '';
+		position: absolute;
+		background-image: url(/img/huddle-lp/bg-footer-top-desktop.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		z-index: 1;
+    height: 15.6rem;
+    left: 0;
+    right: 0;
+    bottom: 88.4rem;
+	}
+	.logo-a {
+		fill: $very_pale_blue;
+	}
+	> .info-gr {
+		grid-column: c / span;
+		grid-row: row;
+		> .logo-f {
+			
+		}
+	}
+	.submit-gr {
+		grid-column: c 2/ span;
+		grid-row: row;
+		input, button {
+			appearance: none;
+		}
+	}
 }
 
 

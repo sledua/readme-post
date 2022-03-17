@@ -12,6 +12,10 @@
 		- [Screenshot](#screenshot-2)
 		- [Links](#links-2)
 		- [Built with](#built-with-2)
+- [Huddle landing page with curved sections](#huddle-landing-page-with-curved-sections)
+		- [Screenshot](#screenshot-3)
+		- [Links](#links-3)
+		- [Built with](#built-with-3)
 
 # QR code component solution
 
@@ -58,3 +62,17 @@ This is a solution to the [Single price grid component](https://www.frontendment
 - CSS custom properties
 - Flexbox
 - JS
+# Huddle landing page with curved sections
+This is a solution to the [Huddle landing page with curved sections](https://www.frontendmentor.io/challenges/huddle-landing-page-with-curved-sections-5ca5ecd01e82137ec91a50f2). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+### Screenshot
+
+![](./huddle_lp.png)
+### Links
+
+- Solution URL: [Repo](https://github.com/sledua/readme-post/tree/huddle-lp-dev)
+- Live Site URL: [Live GH-pages](https://sledua.github.io/readme-post/huddle_lp.html)
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox

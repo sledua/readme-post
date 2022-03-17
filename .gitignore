@@ -8,3 +8,7 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+app/
+node_modules
+dist
+package-lock.json

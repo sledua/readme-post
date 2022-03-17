@@ -29,7 +29,8 @@ function generateCSS(cb) {
 	src('./app/scss/*.scss')
 		.pipe(sass().on('error', sass.logError))
 		//.pipe(cssNano())
-		.pipe(dest(`${DIST}/css/${NAMEPROD}/`&&`app/css/${NAMEPROD}`))
+		//.pipe(dest(`${DIST}/css/${NAMEPROD}`&&`app/css/${NAMEPROD}`))
+		.pipe(dest(`${DIST}/css/${NAMEPROD}`))
 		
 	cb();
 }

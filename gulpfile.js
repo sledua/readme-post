@@ -9,7 +9,7 @@ const DIST = 'dist';
 function copy (cb) {
 	src('app/js/*/*.js')
 		.pipe(dest(`${DIST}/js/${NAMEPROD}/`));
-	src('app/fonts/*/*.*')
+	src('app/fonts/**/*')
 		.pipe(dest(`${DIST}/fonts/`));
 	src('app/img/**/*')
 		.pipe(dest(`${DIST}/img/${NAMEPROD}/`));
@@ -30,7 +30,8 @@ function generateCSS(cb) {
 		.pipe(sass().on('error', sass.logError))
 		//.pipe(cssNano())
 		//.pipe(dest(`${DIST}/css/${NAMEPROD}`&&`app/css/${NAMEPROD}`))
-		.pipe(dest(`${DIST}/css/${NAMEPROD}`))
+		.pipe(dest(`${DIST}/css/${NAMEPROD}/`))
+		.pipe(dest(`app/css/${NAMEPROD}/`))
 		
 	cb();
 }
@@ -60,4 +61,5 @@ exports.copy = copy;
 exports.css = generateCSS;
 exports.watch = watchApp;
 exports.sync = browserSync;
+exports.clean = cleanApp;
 exports.dev = series(browserSync, watchApp);

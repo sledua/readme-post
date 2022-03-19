@@ -1,0 +1,32 @@
+{
+  "name": "space",
+  "version": "1.0.0",
+  "description": "This project is a fun collaboration with Scrimba and Kevin Powell! If you like, you can follow along and watch Kevin complete the project on Scrimba. Lots to learn!",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sledua/readme-post.git#space-dev"
+  },
+  "keywords": [
+    "gulp",
+    "js",
+    "scss"
+  ],
+  "author": "Art Sled",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sledua/readme-post/issues"
+  },
+  "homepage": "https://github.com/sledua/readme-post/tree/space-dev#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.9",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.9"
+  }
+}

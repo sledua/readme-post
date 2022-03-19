@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/Poppins/Poppins_Bold.ttf") format("ttf");
+}
+::placeholder {
+  color: #666;
+}
+
+::selection {
+  background-color: orange;
+  color: #fff;
+}
+
+:root {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.4rem;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.65;
+  font-family: "Poppins";
+  overflow-x: hidden;
+  color: #333;
+  margin: 0;
+}
+body input, body textarea {
+  border: #666 1px solid;
+  outline: none;
+}
+body input:focus:required:invalid, body textarea:focus:required:invalid {
+  border-color: red;
+}
+body input:required:valid, body textarea:required:valid {
+  border-color: green;
+}

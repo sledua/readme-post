@@ -10,5 +10,4 @@ _site
 vendor
 app/
 node_modules
-dist
 package-lock.json

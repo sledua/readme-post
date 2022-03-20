@@ -1,3 +1,4 @@
+//npm install --save-dev gulp gulp-cssnano gulp-clean browser-sync gulp-sass sass
 const { src, dest, watch, parallel, series } = require("gulp");
 const sass = require('gulp-sass')(require('sass'));
 const cssNano = require("gulp-cssnano");
@@ -60,3 +61,4 @@ exports.watch = watchApp;
 exports.sync = browserSync;
 exports.clean = cleanApp;
 exports.dev = series(browserSync, watchApp);
+

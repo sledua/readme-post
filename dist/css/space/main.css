@@ -1,8 +1,14 @@
 @font-face {
-  font-family: "Poppins";
+  font-family: "BarlowRegular";
   font-style: normal;
-  font-weight: 800;
-  src: url("../fonts/Poppins/Poppins_Bold.ttf") format("ttf");
+  font-weight: 400;
+  src: url("../fonts/BarlowCondensed/BarlowCondensed-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: "BarlowBold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/BarlowCondensed/BarlowCondensed-Bold.ttf") format("ttf");
 }
 ::placeholder {
   color: #666;
@@ -22,7 +28,7 @@ body {
   min-width: 320px;
   position: relative;
   line-height: 1.65;
-  font-family: "Poppins";
+  font-family: "BarlowRegular", sans-serif;
   overflow-x: hidden;
   color: #333;
   margin: 0;

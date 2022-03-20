@@ -1,45 +1,337 @@
 @font-face {
-  font-family: "BarlowRegular";
+  font-family: "BarlowCRegular";
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/BarlowCondensed/BarlowCondensed-Regular.ttf") format("ttf");
 }
 @font-face {
-  font-family: "BarlowBold";
+  font-family: "BarlowCBold";
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/BarlowCondensed/BarlowCondensed-Bold.ttf") format("ttf");
 }
+@font-face {
+  font-family: "BarlowRegular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Barlow/Barlow-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: "BarlowBold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Barlow/Barlow-Bold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "BellefairRegular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Bellefair/Bellefair-Regular.ttf") format("ttf");
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 ::placeholder {
   color: #666;
 }
 
 ::selection {
   background-color: orange;
-  color: #fff;
+  color: 0 0% 100%;
 }
 
 :root {
   font-size: 10px;
 }
 
-body {
-  font-size: 1.4rem;
-  min-width: 320px;
-  position: relative;
-  line-height: 1.65;
-  font-family: "BarlowRegular", sans-serif;
-  overflow-x: hidden;
-  color: #333;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
   margin: 0;
 }
-body input, body textarea {
-  border: #666 1px solid;
-  outline: none;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
 }
-body input:focus:required:invalid, body textarea:focus:required:invalid {
-  border-color: red;
+
+body {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  background-color: #0c0e18;
+  font-family: "BarlowCRegular", sans-serif;
+  color: white;
+  min-height: 100vh;
 }
-body input:required:valid, body textarea:required:valid {
-  border-color: green;
+body img, body picutre {
+  max-width: 100%;
+  display: block;
 }
+body input, body button, body textarea, body select {
+  font: inherit;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: inline-grid;
+  gap: var(--gap, 1rem);
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
+.container {
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+.grid-container {
+  outline: 5px solid limegreen;
+  display: grid;
+  column-gap: var(--container-gap, 2rem);
+  grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
+}
+
+.grid-container > *:first-child {
+  grid-column: 2;
+  outline: 1px solid red;
+}
+
+.grid-container > *:last-child {
+  grid-column: 3;
+  outline: 1px solid yellow;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  /* added line */
+  border: 0;
+}
+
+.bg-dark {
+  background-color: #0c0e18;
+}
+
+.bg-accent {
+  background-color: #d2d8f9;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.text-dark {
+  color: #0c0e18;
+}
+
+.text-accent {
+  color: #d2d8f9;
+}
+
+.text-white {
+  color: white;
+}
+
+.ff-serif {
+  font-family: "BellefairRegular", serif;
+}
+
+.ff-sans-cond {
+  font-family: "BarlowCRegular", sans-serif;
+}
+
+.ff-sans-normal {
+  font-family: "BarlowRegular", sans-serif;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 4.75px;
+}
+
+.letter-spacing-2 {
+  letter-spacing: 2.7px;
+}
+
+.letter-spacing-3 {
+  letter-spacing: 2.35px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.fs-900 {
+  font-size: 9.375rem;
+}
+
+.fs-800 {
+  font-size: 6.25rem;
+}
+
+.fs-700 {
+  font-size: 3.5rem;
+}
+
+.fs-600 {
+  font-size: 2rem;
+}
+
+.fs-500 {
+  font-size: 1.75rem;
+}
+
+.fs-400 {
+  font-size: 1.125rem;
+}
+
+.fs-300 {
+  font-size: 1rem;
+}
+
+.fs-200 {
+  font-size: 0.875rem;
+}
+
+.fs-900, .fs-800, .fs-700, .fs-600 {
+  line-height: 1.1;
+}
+
+.numbered-title {
+  font-family: "BarlowCRegular", sans-serif;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  letter-spacing: 4.72px;
+}
+
+.numbered-title span {
+  margin-right: 0.5em;
+  font-weight: 700;
+  color: white;
+}
+
+.large-button {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  padding: 0 2em;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  text-decoration: none;
+}
+
+.large-button::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 500ms linear, transform 750ms ease-in-out;
+}
+
+.large-button:hover::after,
+.large-button:focus::after {
+  opacity: 1;
+  transform: scale(1.5);
+}
+
+.primary-navigation {
+  --gap: 8rem;
+  --underline-gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.primary-navigation a {
+  text-decoration: none;
+}
+
+.primary-navigation > li > a {
+  font-family: "BarlowCRegular", sans-serif;
+}
+
+.primary-navigation a > span {
+  font-weight: 700;
+  margin-right: 0.5em;
+}
+
+.underline-indicators > * {
+  cursor: pointer;
+  padding: var(--underline-gap, 1rem) 0;
+  border: 0;
+  border-bottom: 0.2rem solid black;
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+  border-color: white;
+}
+
+.underline-indicators > .active,
+.underline-indicators > [aria-selected=true] {
+  color: white;
+  border-color: white;
+}
+
+.tab-list {
+  --gap: 2rem;
+}
+
+.dot-indicators > * {
+  cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+  padding: 0.5em;
+  background-color: white;
+}
+
+.dot-indicators > *:hover,
+.dot-indicators > *:focus {
+  background-color: white;
+}
+
+.dot-indicators > [aria-selected=true] {
+  background-color: white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*==========  Desktop First  ==========*/
+/*==========  Mobile First  ==========*/

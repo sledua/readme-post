@@ -96,7 +96,6 @@ body input, body button, body textarea, body select {
 
 .flex.even-columns > * {
   width: 100%;
-  outline: 1px solid limegreen;
 }
 
 .grid {
@@ -120,7 +119,6 @@ body input, body button, body textarea, body select {
 
 .grid-container {
   text-align: center;
-  outline: 5px solid limegreen;
   display: grid;
   place-items: center;
   padding-inline: 1rem;
@@ -275,7 +273,6 @@ body input, body button, body textarea, body select {
 }
 
 .primary-navigation {
-  --gap: 8rem;
   --underline-gap: 2rem;
   list-style: none;
   padding: 0;
@@ -372,6 +369,31 @@ body input, body button, body textarea, body select {
   .home {
     background-position: center center;
     background-image: url(../../img/space/home/background-home-tablet.jpg);
+  }
+
+  .primary-navigation {
+    --underline-gap: 2rem;
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+    background: black;
+    list-style: none;
+    padding: min(20rem, 15vh) 2rem;
+    margin: 0;
+    flex-direction: column;
+  }
+}
+@media (min-width: 35rem) {
+  .primary-navigation {
+    --underline-gap: 2rem;
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+    background: black;
+    list-style: none;
+    padding: min(20rem, 15vh) 2rem;
+    margin: 0;
+    flex-direction: column;
   }
 }
 @media (min-width: 45rem) {

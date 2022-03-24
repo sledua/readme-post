@@ -70,12 +70,16 @@ p {
 }
 
 body {
-  font-size: 1.125rem;
+  font-size: 0.9375rem;
   line-height: 1.5;
   background-color: #0c0e18;
   font-family: "BarlowCRegular", sans-serif;
   color: white;
   min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  background-size: cover;
+  background-position: bottom center;
 }
 body img, body picutre {
   max-width: 100%;
@@ -90,9 +94,18 @@ body input, body button, body textarea, body select {
   gap: var(--gap, 1rem);
 }
 
+.flex.even-columns > * {
+  width: 100%;
+  outline: 1px solid limegreen;
+}
+
 .grid {
   display: inline-grid;
   gap: var(--gap, 1rem);
+}
+
+.d-block {
+  display: block;
 }
 
 .flow > *:where(:not(:first-child)) {
@@ -106,20 +119,15 @@ body input, body button, body textarea, body select {
 }
 
 .grid-container {
+  text-align: center;
   outline: 5px solid limegreen;
   display: grid;
-  column-gap: var(--container-gap, 2rem);
-  grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
+  place-items: center;
+  padding-inline: 1rem;
 }
 
-.grid-container > *:first-child {
-  grid-column: 2;
-  outline: 1px solid red;
-}
-
-.grid-container > *:last-child {
-  grid-column: 3;
-  outline: 1px solid yellow;
+.grid-container * {
+  max-width: 50ch;
 }
 
 .sr-only {
@@ -188,19 +196,19 @@ body input, body button, body textarea, body select {
 }
 
 .fs-900 {
-  font-size: 9.375rem;
+  font-size: clamp(5rem, 8vw + 1rem, 9.375rem);
 }
 
 .fs-800 {
-  font-size: 6.25rem;
-}
-
-.fs-700 {
   font-size: 3.5rem;
 }
 
+.fs-700 {
+  font-size: 1.5rem;
+}
+
 .fs-600 {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .fs-500 {
@@ -208,7 +216,7 @@ body input, body button, body textarea, body select {
 }
 
 .fs-400 {
-  font-size: 1.125rem;
+  font-size: 0.9375rem;
 }
 
 .fs-300 {
@@ -237,9 +245,10 @@ body input, body button, body textarea, body select {
 }
 
 .large-button {
+  font-size: 2rem;
   position: relative;
   z-index: 1;
-  display: grid;
+  display: inline-grid;
   place-items: center;
   padding: 0 2em;
   border-radius: 50%;
@@ -325,6 +334,10 @@ body input, body button, body textarea, body select {
   background-color: white;
 }
 
+.home {
+  background-image: url(../../img/space/home/background-home-mobile.jpg);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -334,4 +347,35 @@ body input, body button, body textarea, body select {
   }
 }
 /*==========  Desktop First  ==========*/
+@media (min-width: 45em) {
+  .grid-container {
+    text-align: left;
+    column-gap: var(--container-gap, 2rem);
+    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
+  }
+
+  .grid-container > *:first-child {
+    grid-column: 2;
+  }
+
+  .grid-container > *:last-child {
+    grid-column: 3;
+  }
+
+  .grid-container--home {
+    padding-bottom: max(6rem, 20vh);
+    align-items: end;
+  }
+}
 /*==========  Mobile First  ==========*/
+@media (min-width: 35rem) {
+  .home {
+    background-position: center center;
+    background-image: url(../../img/space/home/background-home-tablet.jpg);
+  }
+}
+@media (min-width: 45rem) {
+  .home {
+    background-image: url(../../img/space/home/background-home-desktop.jpg);
+  }
+}

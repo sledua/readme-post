@@ -35,7 +35,7 @@ function generateCSS(cb) {
 	cb();
 }
 function watchApp(cb) {
-	watch(['app/*.html',`app/scss/*.scss`]);
+	watch(['app/*.html',`app/scss/*.scss`,'app/js/*.js']);
 	cb();
 }
 function browserSync(cb) {
@@ -49,6 +49,7 @@ function browserSync(cb) {
 	});
 	watch('app/fonts/*/*.*', copy);
 	watch('app/img/**/*', copy);
+	watch('app/js/*', copy);
 	watch('app/libs/**/*', copy);
 	watch(`app/scss/*.scss`, generateCSS).on('change', sync.reload);
 	watch('app/*.html', copy).on('change', sync.reload);

@@ -43,10 +43,6 @@
   color: 0 0% 100%;
 }
 
-:root {
-  font-size: 10px;
-}
-
 body,
 h1,
 h2,
@@ -151,6 +147,21 @@ body input, body button, body textarea, body select {
   border: 0;
 }
 
+.skip-to-content {
+  position: absolute;
+  z-index: 9999;
+  background: hsl(var(--clr-white));
+  color: hsl(var(--clr-dark));
+  padding: 0.5em 1em;
+  margin-inline: auto;
+  transform: translateY(-100%);
+  transition: transform 250ms ease-in;
+}
+
+.skip-to-content:focus {
+  transform: translateY(0);
+}
+
 .bg-dark {
   background-color: #0c0e18;
 }
@@ -220,7 +231,7 @@ body input, body button, body textarea, body select {
 }
 
 .fs-500 {
-  font-size: 1.75rem;
+  font-size: 1rem;
 }
 
 .fs-400 {
@@ -241,7 +252,7 @@ body input, body button, body textarea, body select {
 
 .numbered-title {
   font-family: "BarlowCRegular", sans-serif;
-  font-size: 1.75rem;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 4.72px;
 }
@@ -249,7 +260,7 @@ body input, body button, body textarea, body select {
 .numbered-title span {
   margin-right: 0.5em;
   font-weight: 700;
-  color: white;
+  color: rgba(255, 255, 255, 0.25);
 }
 
 .large-button {
@@ -270,7 +281,7 @@ body input, body button, body textarea, body select {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background: white;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   opacity: 0;
   transition: opacity 500ms linear, transform 750ms ease-in-out;
@@ -366,6 +377,7 @@ body input, body button, body textarea, body select {
     --fs-800: 5rem;
     --fs-700: 2.5rem;
     --fs-600: 1.5rem;
+    --fs-500: 1.25rem;
     --fs-400: 1rem;
   }
 }
@@ -375,6 +387,7 @@ body input, body button, body textarea, body select {
     --fs-800: 6.25rem;
     --fs-700: 3.5rem;
     --fs-600: 2rem;
+    --fs-500: 1.25rem;
     --fs-400: 1.125rem;
   }
 }

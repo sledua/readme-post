@@ -80,6 +80,7 @@ body {
   grid-template-rows: min-content 1fr;
   background-size: cover;
   background-position: bottom center;
+  overflow-x: hidden;
 }
 body img, body picutre {
   max-width: 100%;
@@ -87,6 +88,15 @@ body img, body picutre {
 }
 body input, body button, body textarea, body select {
   font: inherit;
+}
+
+.logo {
+  margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+}
+
+.primary-header {
+  justify-content: space-between;
+  align-items: center;
 }
 
 .flex {
@@ -272,11 +282,18 @@ body input, body button, body textarea, body select {
   transform: scale(1.5);
 }
 
+.mobile-nav-toggle {
+  display: none;
+}
+
 .primary-navigation {
+  --gap: clamp(1.5rem, 5vw, 3.5rem);
   --underline-gap: 2rem;
   list-style: none;
   padding: 0;
   margin: 0;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(1.5rem);
 }
 
 .primary-navigation a {
@@ -296,18 +313,18 @@ body input, body button, body textarea, body select {
   cursor: pointer;
   padding: var(--underline-gap, 1rem) 0;
   border: 0;
-  border-bottom: 0.2rem solid black;
+  border-bottom: 0.2rem solid rgba(255, 255, 255, 0);
 }
 
 .underline-indicators > *:hover,
 .underline-indicators > *:focus {
-  border-color: white;
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 .underline-indicators > .active,
 .underline-indicators > [aria-selected=true] {
-  color: white;
-  border-color: white;
+  color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .tab-list {
@@ -319,16 +336,16 @@ body input, body button, body textarea, body select {
   border: 0;
   border-radius: 50%;
   padding: 0.5em;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 .dot-indicators > *:hover,
 .dot-indicators > *:focus {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .dot-indicators > [aria-selected=true] {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .home {
@@ -344,6 +361,75 @@ body input, body button, body textarea, body select {
   }
 }
 /*==========  Desktop First  ==========*/
+@media (min-width: 35em) {
+  :root {
+    --fs-800: 5rem;
+    --fs-700: 2.5rem;
+    --fs-600: 1.5rem;
+    --fs-400: 1rem;
+  }
+}
+@media (min-width: 45em) {
+  :root {
+    /* font-sizes */
+    --fs-800: 6.25rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-400: 1.125rem;
+  }
+}
+@media (max-width: 35rem) {
+  .primary-navigation {
+    --underline-gap: .5rem;
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+    list-style: none;
+    padding: min(20rem, 15vh) 2rem;
+    margin: 0;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 500ms ease-in-out;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 2000;
+    right: 1rem;
+    top: 2rem;
+    background: transparent;
+    background-image: url(../../img/space/shared/icon-hamburger.svg);
+    border: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 2.5rem;
+    aspect-ratio: 1;
+    border: 0;
+  }
+
+  .primary-navigation[data-visible=true] {
+    transform: translateX(0);
+  }
+
+  .primary-navigation.underline-indicators > .active {
+    border: 0;
+  }
+
+  .mobile-nav-toggle[aria-expanded=true] {
+    background-image: url(../../img/space/shared/icon-close.svg);
+  }
+}
+@media (min-width: 35em) {
+  .primary-navigation {
+    padding-inline: clamp(3rem, 7vw, 7rem);
+  }
+}
+@media (min-width: 35em) and (max-width: 44.999em) {
+  .primary-navigation a > span {
+    display: none;
+  }
+}
 @media (min-width: 45em) {
   .grid-container {
     text-align: left;
@@ -363,37 +449,31 @@ body input, body button, body textarea, body select {
     padding-bottom: max(6rem, 20vh);
     align-items: end;
   }
+
+  .primary-header::after {
+    content: "";
+    display: block;
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin-right: -2.5rem;
+    background: rgba(255, 255, 255, 0.25);
+    order: 1;
+  }
+
+  nav {
+    order: 2;
+  }
+
+  .primary-navigation {
+    margin-block: 2rem;
+  }
 }
 /*==========  Mobile First  ==========*/
 @media (min-width: 35rem) {
   .home {
     background-position: center center;
     background-image: url(../../img/space/home/background-home-tablet.jpg);
-  }
-
-  .primary-navigation {
-    --underline-gap: 2rem;
-    position: fixed;
-    z-index: 1000;
-    inset: 0 0 0 30%;
-    background: black;
-    list-style: none;
-    padding: min(20rem, 15vh) 2rem;
-    margin: 0;
-    flex-direction: column;
-  }
-}
-@media (min-width: 35rem) {
-  .primary-navigation {
-    --underline-gap: 2rem;
-    position: fixed;
-    z-index: 1000;
-    inset: 0 0 0 30%;
-    background: black;
-    list-style: none;
-    padding: min(20rem, 15vh) 2rem;
-    margin: 0;
-    flex-direction: column;
   }
 }
 @media (min-width: 45rem) {

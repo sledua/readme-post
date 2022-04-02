@@ -128,10 +128,12 @@ body input, body button, body textarea, body select {
   display: grid;
   place-items: center;
   padding-inline: 1rem;
+  padding-bottom: 4rem;
 }
 
-.grid-container * {
+.grid-container p:not([class]) {
   max-width: 50ch;
+  outline: 3px solid limegreen;
 }
 
 .sr-only {
@@ -363,6 +365,39 @@ body input, body button, body textarea, body select {
   background-image: url(../../img/space/home/background-home-mobile.jpg);
 }
 
+.numbered-title {
+  grid-area: title;
+}
+
+.grid-container--destination {
+  --flow-space: 2rem;
+  grid-template-areas: "title" "image" "tabs" "content";
+}
+
+.grid-container--destination > img {
+  grid-area: image;
+  max-width: 60%;
+}
+
+.grid-container--destination > .tab-list {
+  grid-area: tabs;
+}
+
+.grid-container--destination > .destination-info {
+  grid-area: content;
+}
+
+.destination-meta {
+  flex-direction: column;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+}
+
+.destination-meta p {
+  font-size: 1.75rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -437,6 +472,16 @@ body input, body button, body textarea, body select {
   .primary-navigation {
     padding-inline: clamp(3rem, 7vw, 7rem);
   }
+
+  .numbered-title {
+    justify-self: start;
+    margin-top: 2rem;
+  }
+
+  .destination-meta {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 @media (min-width: 35em) and (max-width: 44.999em) {
   .primary-navigation a > span {
@@ -450,17 +495,17 @@ body input, body button, body textarea, body select {
     grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
   }
 
-  .grid-container > *:first-child {
-    grid-column: 2;
-  }
-
-  .grid-container > *:last-child {
-    grid-column: 3;
-  }
-
   .grid-container--home {
     padding-bottom: max(6rem, 20vh);
     align-items: end;
+  }
+
+  .grid-container--home > *:first-child {
+    grid-column: 2;
+  }
+
+  .grid-container--home > *:last-child {
+    grid-column: 3;
   }
 
   .primary-header::after {
@@ -480,6 +525,21 @@ body input, body button, body textarea, body select {
 
   .primary-navigation {
     margin-block: 2rem;
+  }
+
+  .grid-container--destination {
+    justify-items: start;
+    align-content: start;
+    grid-template-areas: ". title title ." ". image tabs ." ". image content .";
+  }
+
+  .grid-container--destination > img {
+    max-width: 90%;
+  }
+
+  .destination-meta {
+    --gap: min(6vw, 6rem);
+    justify-content: start;
   }
 }
 /*==========  Mobile First  ==========*/

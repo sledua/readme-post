@@ -362,7 +362,7 @@ body input, body button, body textarea, body select {
 }
 
 .dot-indicators > [aria-selected=true] {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: white;
 }
 
 .home {
@@ -389,6 +389,7 @@ body input, body button, body textarea, body select {
 .grid-container--destination > picture {
   grid-area: image;
   max-width: 70%;
+  align-self: start;
 }
 
 .grid-container--destination > .tab-list {
@@ -573,8 +574,7 @@ body input, body button, body textarea, body select {
     grid-template-areas: ". title title ." ". image tabs ." ". image content .";
   }
 
-  .grid-container--destination > img,
-.grid-container--crew > img {
+  .grid-container--destination > picture {
     max-width: 90%;
   }
 
@@ -584,11 +584,19 @@ body input, body button, body textarea, body select {
   }
 
   .grid-container--crew {
+    grid-template-columns: minmax(1rem, 1fr) minmax(0, 37rem) minmax(0, 30rem) minmax(1rem, 1fr);
+    justify-items: start;
     grid-template-areas: ". title title ." ". content image ." ". tabs image .";
   }
 
   .grid-container--crew > .dot-indicators {
     justify-self: start;
+  }
+
+  .grid-container--crew > picture {
+    grid-column: span 2;
+    align-self: end;
+    max-width: 100%;
   }
 }
 /*==========  Mobile First  ==========*/

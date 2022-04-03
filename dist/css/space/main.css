@@ -117,6 +117,10 @@ body input, body button, body textarea, body select {
   margin-top: var(--flow-space, 1rem);
 }
 
+.flow-space--small {
+  --flow-space: .5rem;
+}
+
 .container {
   padding-inline: 2em;
   margin-inline: auto;
@@ -133,7 +137,6 @@ body input, body button, body textarea, body select {
 
 .grid-container p:not([class]) {
   max-width: 50ch;
-  outline: 3px solid limegreen;
 }
 
 .sr-only {
@@ -324,9 +327,10 @@ body input, body button, body textarea, body select {
 
 .underline-indicators > * {
   cursor: pointer;
-  padding: var(--underline-gap, 1rem) 0;
+  padding: var(--underline-gap, 0.75rem) 0;
   border: 0;
-  border-bottom: 0.2rem solid rgba(255, 255, 255, 0);
+  border-bottom: 0.2rem solid transparent;
+  background-color: transparent;
 }
 
 .underline-indicators > *:hover,
@@ -336,8 +340,8 @@ body input, body button, body textarea, body select {
 
 .underline-indicators > .active,
 .underline-indicators > [aria-selected=true] {
-  color: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-color: white;
 }
 
 .tab-list {
@@ -365,6 +369,14 @@ body input, body button, body textarea, body select {
   background-image: url(../../img/space/home/background-home-mobile.jpg);
 }
 
+.destination {
+  background-image: url(../../img/space/destination/background-destination-mobile.jpg);
+}
+
+.crew {
+  background-image: url(../../img/space/crew/background-crew-mobile.jpg);
+}
+
 .numbered-title {
   grid-area: title;
 }
@@ -374,9 +386,9 @@ body input, body button, body textarea, body select {
   grid-template-areas: "title" "image" "tabs" "content";
 }
 
-.grid-container--destination > img {
+.grid-container--destination > picture {
   grid-area: image;
-  max-width: 60%;
+  max-width: 70%;
 }
 
 .grid-container--destination > .tab-list {
@@ -396,6 +408,29 @@ body input, body button, body textarea, body select {
 
 .destination-meta p {
   font-size: 1.75rem;
+}
+
+.grid-container--crew {
+  --flow-space: 2rem;
+  grid-template-areas: "title" "image" "tabs" "content";
+}
+
+.grid-container--crew > picture {
+  grid-area: image;
+  max-width: 70%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.grid-container--crew > .dot-indicators {
+  grid-area: tabs;
+}
+
+.grid-container--crew > .crew-details {
+  grid-area: content;
+}
+
+.crew-details h2 {
+  opacity: 0.5;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -482,6 +517,11 @@ body input, body button, body textarea, body select {
     flex-direction: row;
     justify-content: space-evenly;
   }
+
+  .grid-container--crew {
+    padding-bottom: 0;
+    grid-template-areas: "title" "content" "tabs" "image";
+  }
 }
 @media (min-width: 35em) and (max-width: 44.999em) {
   .primary-navigation a > span {
@@ -533,13 +573,22 @@ body input, body button, body textarea, body select {
     grid-template-areas: ". title title ." ". image tabs ." ". image content .";
   }
 
-  .grid-container--destination > img {
+  .grid-container--destination > img,
+.grid-container--crew > img {
     max-width: 90%;
   }
 
   .destination-meta {
     --gap: min(6vw, 6rem);
     justify-content: start;
+  }
+
+  .grid-container--crew {
+    grid-template-areas: ". title title ." ". content image ." ". tabs image .";
+  }
+
+  .grid-container--crew > .dot-indicators {
+    justify-self: start;
   }
 }
 /*==========  Mobile First  ==========*/
@@ -548,9 +597,27 @@ body input, body button, body textarea, body select {
     background-position: center center;
     background-image: url(../../img/space/home/background-home-tablet.jpg);
   }
+
+  .destination {
+    background-position: center center;
+    background-image: url(../../img/space/destination/background-destination-tablet.jpg);
+  }
+
+  .crew {
+    background-position: center center;
+    background-image: url(../../img/space/crew/background-crew-tablet.jpg);
+  }
 }
 @media (min-width: 45rem) {
   .home {
     background-image: url(../../img/space/home/background-home-desktop.jpg);
+  }
+
+  .destination {
+    background-image: url(../../img/space/destination/background-destination-desktop.jpg);
+  }
+
+  .crew {
+    background-image: url(../../img/space/crew/background-crew-desktop.jpg);
   }
 }
